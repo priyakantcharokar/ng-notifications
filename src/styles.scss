@@ -1,0 +1,108 @@
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+body { 
+  font-family: Roboto, Arial, sans-serif;
+  margin: 0;
+
+}
+
+.basic-container {
+  padding: 5px;
+}
+
+.version-info {
+  font-size: 8pt;
+  float: right;
+}
+.red-snackbar {
+  background: rgb(240, 4, 4);
+}
+
+.ribbon {
+ font-size: 16px !important;
+ /* This ribbon is based on a 16px font side and a 24px vertical rhythm. I've used em's to position each element for scalability. If you want to use a different font size you may have to play with the position of the ribbon elements */
+
+ width: 50%;
+    
+ position: relative;
+ font-weight: 900;
+ background: #040b5d;
+ color: #fff;
+ text-align: center;
+ padding: 1em 2em; /* Adjust to suit */
+ margin: 2em auto 3em; /* Based on 24px vertical rhythm. 48px bottom margin - normally 24 but the ribbon 'graphics' take up 24px themselves so we double it. */
+}
+.ribbon:before, .ribbon:after {
+ content: "";
+ position: absolute;
+ display: block;
+ bottom: -1em;
+ border: 1.5em solid #040b5d;
+ z-index: -1;
+}
+.ribbon:before {
+ left: -2em;
+ border-right-width: 1.5em;
+ border-left-color: transparent;
+}
+.ribbon:after {
+ right: -2em;
+ border-left-width: 1.5em;
+ border-right-color: transparent;
+}
+.ribbon .ribbon-content:before, .ribbon .ribbon-content:after {
+ content: "";
+ position: absolute;
+ display: block;
+ border-style: solid;
+ border-color: #040b5d transparent transparent transparent;
+ bottom: -1em;
+}
+.ribbon .ribbon-content:before {
+ left: 0;
+ border-width: 1em 0 0 1em;
+}
+.ribbon .ribbon-content:after {
+ right: 0;
+ border-width: 1em 1em 0 0;
+}
+
+// ::ng-deep mat-card{
+//   background:#09aee0 !important;
+//   padding: 5px !important;
+// }
+.danger-message {
+  background-image: url('https://cdn2.iconfinder.com/data/icons/mix-color-5/100/Mix_color_5__info-512.png');
+  background-size: cover;
+}
+
+.warning-message {
+  background-image: url('data:image/png;base64,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');
+  background-size: cover;
+}
+
+.info-message {
+  background-image: url('https://cdn2.iconfinder.com/data/icons/duo-toolbar-signs/512/info-512.png');
+  background-size: cover;
+}
+
+.mat-card {
+    background:#fff !important;
+    transition: box-shadow 280ms cubic-bezier(.4,0,.2,1);
+    display: block;
+    position: relative;
+    padding: 5px !important;
+    border-radius: 2px;
+}
+
+.mat-dialog-container{
+  background: #c3ecff !important
+}
+
+.notify {
+  float: right;
+}
+ .material-icons {
+    font-size: 35px;
+    float: right
+}
